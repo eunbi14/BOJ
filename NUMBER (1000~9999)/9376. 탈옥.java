@@ -1,5 +1,5 @@
 //O(3hw)
-//µµÂøÁöÁ¡(0,0), ÁË¼ö1, ÁË¼ö2 °¡ ¸ğµç Ä­¿¡¼­ ¸¸³ª´Â °¡ÁßÄ¡¸¦ °í·Á
+//ë„ì°©ì§€ì (0,0), ì£„ìˆ˜1, ì£„ìˆ˜2 ê°€ ëª¨ë“  ì¹¸ì—ì„œ ë§Œë‚˜ëŠ” ê°€ì¤‘ì¹˜ë¥¼ ê³ ë ¤
 package dfs_bfs;
 
 import java.io.BufferedReader;
@@ -19,7 +19,7 @@ class Node{
 	}
 }
 
-public class Å»¿Á_9367 {
+public class íƒˆì˜¥_9367 {
 	static int h, w;
 	static char[][] map;
 	static int[][] check_end, check_one, check_two;
@@ -47,7 +47,7 @@ public class Å»¿Á_9367 {
 				map[j][w+1] = '.';
 			}
 			Node[] prisoner = new Node[2];
-			int index = 0; //ÁË¼öµé ¹è¿­¿¡ ³ÖÀ» ÀÎµ¦½º
+			int index = 0; //ì£„ìˆ˜ë“¤ ë°°ì—´ì— ë„£ì„ ì¸ë±ìŠ¤
 			for(int j=1;j<h+1;j++) {
 				String s = bf.readLine();
 				for(int k=1;k<w+1;k++) {
