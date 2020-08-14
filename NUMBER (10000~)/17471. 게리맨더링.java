@@ -1,4 +1,4 @@
-package ºê·çÆ®Æ÷½º;
+package ë¸Œë£¨íŠ¸í¬ìŠ¤;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,11 +6,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class °Ô¸®¸Ç´õ¸µ_17471 {
-	static int N; // Áö¿ª ¼ö
-	static int[] population; // ÀÎ±¸
+public class ê²Œë¦¬ë§¨ë”ë§_17471 {
+	static int N; // ì§€ì—­ ìˆ˜
+	static int[] population; // ì¸êµ¬
 	static int answer = 10000;
-	static boolean[][] connect; // ¿¬°á µÇ¾î ÀÖ´ÂÁö ¿©ºÎ
+	static boolean[][] connect; // ì—°ê²° ë˜ì–´ ìˆëŠ”ì§€ ì—¬ë¶€
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
@@ -31,9 +31,9 @@ public class °Ô¸®¸Ç´õ¸µ_17471 {
 			}
 		}
 		
-		char[] AB = new char[N+1]; // A¼±°Å±¸ÀÎÁö B¼±°Å±¸ÀÎÁö ÀúÀå
-		Arrays.fill(AB, 'A'); // Ã³À½¿¡ ´Ù A·Î µÎ°í -> ÀÌ°É B·Î ÇÏ¸é Æ²¸²!!! ¿Ö?
-		solution(1, AB); // ÇÏ³ª¾¿ A·Î ¹Ù²ã°¡±â
+		char[] AB = new char[N+1]; // Aì„ ê±°êµ¬ì¸ì§€ Bì„ ê±°êµ¬ì¸ì§€ ì €ì¥
+		Arrays.fill(AB, 'A'); // ì²˜ìŒì— ë‹¤ Aë¡œ ë‘ê³  -> ì´ê±¸ Bë¡œ í•˜ë©´ í‹€ë¦¼!!! ì™œ?
+		solution(1, AB); // í•˜ë‚˜ì”© Aë¡œ ë°”ê¿”ê°€ê¸°
 		
 		if(answer==10000) answer = -1;
 		System.out.println(answer);
@@ -58,7 +58,7 @@ public class °Ô¸®¸Ç´õ¸µ_17471 {
 			}
 		}
 		
-		// Á¶°ÇµéÀ» ´Ù ¸¸Á·ÇØ¼­ ÀÎ±¸Â÷¸¦ ºñ±³ÇØµµ µÇ´ÂÁö È®ÀÎ
+		// ì¡°ê±´ë“¤ì„ ë‹¤ ë§Œì¡±í•´ì„œ ì¸êµ¬ì°¨ë¥¼ ë¹„êµí•´ë„ ë˜ëŠ”ì§€ í™•ì¸
 		if(ABrate(AB) && check(AB, 'A', visited, a) && check(AB, 'B', visited, b)) compare(AB);
 		solution(index+1, AB);
 		AB[index] = 'B';
@@ -74,7 +74,7 @@ public class °Ô¸®¸Ç´õ¸µ_17471 {
 	}
 
 	private static boolean ABrate(char[] AB) {
-		// A³ª B ¼±°Å±¸ Áß 0°³ÀÇ Áö¿ªÀÌ ¼ÓÇÑ °æ¿ì false ¸®ÅÏ
+		// Aë‚˜ B ì„ ê±°êµ¬ ì¤‘ 0ê°œì˜ ì§€ì—­ì´ ì†í•œ ê²½ìš° false ë¦¬í„´
 		int a = 0, b = 0;
 		for(int i=1;i<=N;i++) {
 			if(AB[i]=='A') a++;
@@ -86,7 +86,7 @@ public class °Ô¸®¸Ç´õ¸µ_17471 {
 	}
 	
 	private static boolean check(char[] AB, char c, boolean[] visited, int start) {
-		// c°¡ ¾Æ´Ñ ¼±°Å±¸¿¡¼­ ¸ğµç Áö¿ªÀÌ ´Ù ¿¬°áµÇ¾î ÀÖ´ÂÁö È®ÀÎ
+		// cê°€ ì•„ë‹Œ ì„ ê±°êµ¬ì—ì„œ ëª¨ë“  ì§€ì—­ì´ ë‹¤ ì—°ê²°ë˜ì–´ ìˆëŠ”ì§€ í™•ì¸
 		if(visited[start]) return false;
 		if(AB[start]==c) return false;
 		visited[start] = true;
@@ -106,7 +106,7 @@ public class °Ô¸®¸Ç´õ¸µ_17471 {
 	}
 
 	private static void compare(char[] AB) {
-		// µÎ ¼±°Å±¸ ÀÎ±¸ ºñ±³
+		// ë‘ ì„ ê±°êµ¬ ì¸êµ¬ ë¹„êµ
 		int dif = 0;
 		for(int i=1;i<=N;i++) {
 			if(AB[i]=='A') dif += population[i];
