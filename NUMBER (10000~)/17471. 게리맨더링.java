@@ -1,12 +1,10 @@
-package 브루트포스;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class 게리맨더링_17471 {
+public class Main {
 	static int N; // 지역 수
 	static int[] population; // 인구
 	static int answer = 10000;
