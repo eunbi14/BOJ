@@ -1,10 +1,8 @@
-package 그리디;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class 전자레인지_10162 {
+public class Main {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// A 300 B 60 C 10 T 100 -> a 0 b 1 c 4 
