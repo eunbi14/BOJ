@@ -1,5 +1,3 @@
-package »ï¼º;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,8 +13,8 @@ class Marble{
 	int count = 0;	
 }
 
-public class ±¸½½Å»Ãâ2_13460 {
-	static int N, M; //NÀÌ ¼¼·Î, MÀÌ °¡·Î
+public class Main {
+	static int N, M; //Nì´ ì„¸ë¡œ, Mì´ ê°€ë¡œ
 	static Queue<Marble> q = new LinkedList<>();
 	static boolean red, blue;
 	static char[][] board;
@@ -62,7 +60,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 		Marble next = new Marble();
 		next.rRow = n.rRow;
 		next.bRow = n.bRow;
-		// ¿À¸¥ÂÊÀ¸·Î »¡°£ ±¸½½ ±¼¸®±â
+		// ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë¹¨ê°„ êµ¬ìŠ¬ êµ´ë¦¬ê¸°
 		for(int i=n.rCol;i<M;i++) {
 			if(board[n.rRow][i]=='O') {
 				red = true;
@@ -75,7 +73,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 			}
 		}
 		
-		// ¿À¸¥ÂÊÀ¸·Î ÆÄ¶õ ±¸½½ ±¼¸®±â
+		// ì˜¤ë¥¸ìª½ìœ¼ë¡œ íŒŒë€ êµ¬ìŠ¬ êµ´ë¦¬ê¸°
 		for(int i=n.bCol;i<M;i++) {
 			if(board[n.bRow][i]=='O') {
 				blue = true;
@@ -93,7 +91,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 			else next.bCol--;
 		}
 		
-		// ±¸½½ÀÌ ³ª¿Ô´ÂÁö È®ÀÎÇÏ±â
+		// êµ¬ìŠ¬ì´ ë‚˜ì™”ëŠ”ì§€ í™•ì¸í•˜ê¸°
 		check(red, blue, n, next);
 		
 		n = q.peek();
@@ -102,7 +100,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 		next = new Marble();
 		next.rRow = n.rRow;
 		next.bRow = n.bRow;
-		// ¿ŞÂÊÀ¸·Î »¡°£ ±¸½½ ±¼¸®±â
+		// ì™¼ìª½ìœ¼ë¡œ ë¹¨ê°„ êµ¬ìŠ¬ êµ´ë¦¬ê¸°
 		for(int i=n.rCol;i>=0;i--) {
 			if(board[n.rRow][i]=='O') {
 				red = true;
@@ -115,7 +113,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 			}
 		}
 		
-		// ¿ŞÂÊÀ¸·Î ÆÄ¶õ ±¸½½ ±¼¸®±â
+		// ì™¼ìª½ìœ¼ë¡œ íŒŒë€ êµ¬ìŠ¬ êµ´ë¦¬ê¸°
 		for(int i=n.bCol;i>=0;i--) {
 			if(board[n.bRow][i]=='O') {
 				blue = true;
@@ -133,7 +131,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 			else next.rCol++;
 		}
 		
-		// ±¸½½ÀÌ ³ª¿Ô´ÂÁö È®ÀÎÇÏ±â
+		// êµ¬ìŠ¬ì´ ë‚˜ì™”ëŠ”ì§€ í™•ì¸í•˜ê¸°
 		check(red, blue, n, next);
 		
 		n = q.peek();
@@ -143,7 +141,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 
 		next.rCol = n.rCol;
 		next.bCol = n.bCol;
-		// ¾Æ·¡ÂÊÀ¸·Î »¡°£ ±¸½½ ±¼¸®±â
+		// ì•„ë˜ìª½ìœ¼ë¡œ ë¹¨ê°„ êµ¬ìŠ¬ êµ´ë¦¬ê¸°
 		for(int i=n.rRow;i<N;i++) {
 			if(board[i][n.rCol]=='O') {
 				red = true;
@@ -156,7 +154,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 			}
 		}
 		
-		// ¾Æ·¡ÂÊÀ¸·Î ÆÄ¶õ ±¸½½ ±¼¸®±â
+		// ì•„ë˜ìª½ìœ¼ë¡œ íŒŒë€ êµ¬ìŠ¬ êµ´ë¦¬ê¸°
 		for(int i=n.bRow;i<N;i++) {
 			if(board[i][n.bCol]=='O') {
 				blue = true;
@@ -174,7 +172,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 			else next.bRow--;
 		}
 		
-		// ±¸½½ÀÌ ³ª¿Ô´ÂÁö È®ÀÎÇÏ±â
+		// êµ¬ìŠ¬ì´ ë‚˜ì™”ëŠ”ì§€ í™•ì¸í•˜ê¸°
 		check(red, blue, n, next);
 		
 		n = q.poll();
@@ -184,7 +182,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 
 		next.rCol = n.rCol;
 		next.bCol = n.bCol;
-		// À§ÂÊÀ¸·Î »¡°£ ±¸½½ ±¼¸®±â
+		// ìœ„ìª½ìœ¼ë¡œ ë¹¨ê°„ êµ¬ìŠ¬ êµ´ë¦¬ê¸°
 		for(int i=n.rRow;i>=0;i--) {
 			if(board[i][n.rCol]=='O') {
 				red = true;
@@ -197,7 +195,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 			}
 		}
 		
-		// À§ÂÊÀ¸·Î ÆÄ¶õ ±¸½½ ±¼¸®±â
+		// ìœ„ìª½ìœ¼ë¡œ íŒŒë€ êµ¬ìŠ¬ êµ´ë¦¬ê¸°
 		for(int i=n.bRow;i>=0;i--) {
 			if(board[i][n.bCol]=='O') {
 				blue = true;
@@ -217,7 +215,7 @@ public class ±¸½½Å»Ãâ2_13460 {
 			else next.rRow++;
 		}
 		
-		// ±¸½½ÀÌ ³ª¿Ô´ÂÁö È®ÀÎÇÏ±â
+		// êµ¬ìŠ¬ì´ ë‚˜ì™”ëŠ”ì§€ í™•ì¸í•˜ê¸°
 		check(red, blue, n, next);
 		
 		bfs();
