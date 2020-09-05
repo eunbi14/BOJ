@@ -1,11 +1,11 @@
-package µ¿ÀûÇÁ·Î±×·¡¹Ö;
+package ë™ì í”„ë¡œê·¸ë˜ë°;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class ÇÕºĞÇØ_2225 {
+public class í•©ë¶„í•´_2225 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -26,19 +26,15 @@ public class ÇÕºĞÇØ_2225 {
 					
 						dp[n][k] += dp[i][k-1];
 						dp[n][k] %= 1000000000;
-						//3Áß for¹® ¾Èµ¹¸®°í 
-						//dp[n][k] = dp[n][k-1] + dp[n-1][k]; ·Î ½áµµ µÊ
-						//dp[n-1][k] = dp[n-1][k-1] + dp[n-2][k] ´Ï±î
-						// Âß Àç±Í·Î ³»·Á°¡¸é °°À½!
+						//3ì¤‘ forë¬¸ ì•ˆëŒë¦¬ê³  
+						//dp[n][k] = dp[n][k-1] + dp[n-1][k]; ë¡œ ì¨ë„ ë¨
+						//dp[n-1][k] = dp[n-1][k-1] + dp[n-2][k] ë‹ˆê¹Œ
+						// ì­‰ ì¬ê·€ë¡œ ë‚´ë ¤ê°€ë©´ ê°™ìŒ!
 				}
 
 			}
 
 		}
-
-		
-		 for(int i=1;i<=N;i++) { for(int j=1;j<=K;j++) {
-		 System.out.println(i+"¸¦ "+j+"°³·Î ¸¸µç ¹æ¹ı : "+dp[i][j]); } }
 		
 		System.out.println(dp[N][K]);
 	}
