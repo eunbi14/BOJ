@@ -1,10 +1,8 @@
-package ÀÌºĞÅ½»ö;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class °ÔÀÓ_1072 {
+public class Main {
 	static long z;
 
 	public static void main(String[] args) throws IOException {
@@ -23,13 +21,11 @@ public class °ÔÀÓ_1072 {
 			long right = x;
 			long answer = 0;
 			long temp = 0;
-	//	System.out.println("z: "+z+ " "+y/x+" "+y*100/x);
-		
+	
 			while(left<=right) {
 				
 				answer = (left+right)/2;
 				temp =(y+answer)*100/(x+answer);
-			//	System.out.println(answer+", "+left+", "+right+", "+z);
 				if(temp>z) {
 					right = answer -1;
 					
@@ -40,6 +36,7 @@ public class °ÔÀÓ_1072 {
 			}
 			
 			System.out.println(left);
+			//ì—¬ê¸°ì„œ answerë¥¼ ì¶œë ¥í•´ì„œ ê³„ì† í—¤ë§¸ë‹¤. answer ì•„ë‹ˆê³  left ì¶œë ¥í•˜ê¸°!
 		}
 	
 		
