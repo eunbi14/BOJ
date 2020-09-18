@@ -1,5 +1,3 @@
-package µ¿ÀûÇÁ·Î±×·¡¹Ö;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,7 +14,7 @@ class Node{
 	}
 	
 }
-public class Ä¡Áî_2636 {
+public class Main {
 	static Stack<Node> air = new Stack<>();
 	static int[][] board;
 	static int a, b;
@@ -27,8 +25,8 @@ public class Ä¡Áî_2636 {
 		// TODO Auto-generated method stub
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
-		a = Integer.parseInt(st.nextToken()); //¼¼·Î ±æÀÌ
-		b = Integer.parseInt(st.nextToken()); //°¡·Î ±æÀÌ
+		a = Integer.parseInt(st.nextToken()); //ì„¸ë¡œ ê¸¸ì´
+		b = Integer.parseInt(st.nextToken()); //ê°€ë¡œ ê¸¸ì´
 		board = new int[a][b];
 		
 		for(int i=0;i<a;i++) {
@@ -44,9 +42,9 @@ public class Ä¡Áî_2636 {
 		while(true) {
 			boolean[][] visited = new boolean[a][b];
 			air.add(new Node(0, 0));
-			bfs(visited); //°ø±â ºÎºĞÀ» ÀüºÎ 2·Î ¹Ù²ãÁÖ±â 
+			bfs(visited); //ê³µê¸° ë¶€ë¶„ì„ ì „ë¶€ 2ë¡œ ë°”ê¿”ì£¼ê¸° 
 			
-			one = melt(); // °ø±â¶û Á¢ÃËÇÑ ºÎºĞ ³ìÀÌ±â, ³ìÀº °³¼ö turn¿¡ ÀúÀå
+			one = melt(); // ê³µê¸°ë‘ ì ‘ì´‰í•œ ë¶€ë¶„ ë…¹ì´ê¸°, ë…¹ì€ ê°œìˆ˜ turnì— ì €ì¥
 			time++;
 			if(cheeze==0) break;
 		
