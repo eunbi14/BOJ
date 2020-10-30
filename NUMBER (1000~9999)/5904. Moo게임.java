@@ -1,10 +1,8 @@
-package 동적프로그래밍;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Moo게임_5904 {
+public class Main {
 	static int[] len = new int[100000];
 	
 	static public void first(int N, int k) {
