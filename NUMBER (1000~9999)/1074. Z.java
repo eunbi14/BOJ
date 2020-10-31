@@ -1,10 +1,8 @@
-package 분할정복;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Z_1074 {
+public class Main {
 	static int N, r, c, answer;
 
 	public static void main(String[] args) throws IOException {
