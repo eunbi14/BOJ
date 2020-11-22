@@ -1,5 +1,3 @@
-package Æ®¸®;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Æ®¸®ÀÇºÎ¸ğÃ£±â_11725 {
+public class Main {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
@@ -24,7 +22,7 @@ public class Æ®¸®ÀÇºÎ¸ğÃ£±â_11725 {
 			int x = Integer.valueOf(st.nextToken());
 			int y = Integer.valueOf(st.nextToken());
 			
-			// ¾ç¹æÇâ ¿¬°á
+			// ì–‘ë°©í–¥ ì—°ê²°
 			graph[x].add(y);
 			graph[y].add(x);
 		}
@@ -50,7 +48,9 @@ public class Æ®¸®ÀÇºÎ¸ğÃ£±â_11725 {
 		}
 		
 		System.out.println(output);
+		
 		/*
+		// N ë²”ìœ„ê°€ ì»¤ì„œ í•˜ë‚˜í•˜ë‚˜ ì¶œë ¥í•˜ëŠ” ê²ƒë³´ë‹¤ StringBuilder ì¨ì„œ ì¶œë ¥í•˜ëŠ” ê²Œ í›¨ì”¬ ë¹ ë¦„!
 		for(int i=2;i<=N;i++) {
 			System.out.println(answer[i]);
 		}
