@@ -1,5 +1,3 @@
-package queue;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,7 +17,7 @@ class Node{
 	
 }
 
-public class 프린터큐_1966 {
+public class Main {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
