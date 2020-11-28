@@ -1,11 +1,9 @@
-package Æ®¸®;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class ÃÖ¼Ú°ª°úÃÖ´ñ°ª_2357 {
+public class Main {
 	static int[] minTree, maxTree;
 
 	public static void main(String[] args) throws IOException {
