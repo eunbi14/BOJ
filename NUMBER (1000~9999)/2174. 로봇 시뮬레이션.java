@@ -1,5 +1,3 @@
-package ½Ã¹Ä·¹ÀÌ¼Ç;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,7 +16,7 @@ class Robot{
 		this.dir = dir;
 	}
 }
-public class ·Îº¿½Ã¹Ä·¹ÀÌ¼Ç_2174 {
+public class Main {
 	static Robot[] robot;
 	static int A, B;
 	static boolean flag;
