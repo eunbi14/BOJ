@@ -1,10 +1,8 @@
-package ºê·çÆ®Æ÷½º;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class °¨¼ÒÇÏ´Â¼ö_1038 {
+public class Main {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
@@ -20,11 +18,11 @@ public class °¨¼ÒÇÏ´Â¼ö_1038 {
 		for(int i=0;i<=9;i++) num[i] = i;
 		int startIdx = 0;
 		int endIdx = 9;
-		long ten = 10; // ÇöÀç ÀÚ¸´¼ö
+		long ten = 10; // í˜„ìž¬ ìžë¦¿ìˆ˜
 	
-		int index = 10; //¼ýÀÚ¸¦ Áý¾î³ÖÀ» ÀÎµ¦½º
+		int index = 10; //ìˆ«ìžë¥¼ ì§‘ì–´ë„£ì„ ì¸ë±ìŠ¤
 		long first = 1;
-		for(long j = first;j<=9;j++) { //first´Â ¸Ç ¾ÕÀÚ¸® ¼ýÀÚ 1~9
+		for(long j = first;j<=9;j++) { //firstëŠ” ë§¨ ì•žìžë¦¬ ìˆ«ìž 1~9
 			for(int i=startIdx;i<=endIdx;i++) {
 				
 				if(num[i]/(ten/10)<j) {
@@ -51,7 +49,7 @@ public class °¨¼ÒÇÏ´Â¼ö_1038 {
 			
 		}
 		
-		System.out.println("-1");
+		System.out.println("-1"); // ìˆ˜ë¥¼ ë§Œë“¤ ìˆ˜ ì—†ëŠ” ê²½ìš°
 	}
 
 }
