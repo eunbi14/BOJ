@@ -1,11 +1,9 @@
-package ½Ã¹Ä·¹ÀÌ¼Ç;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Ä³½½µğÆæ½º_17135 {
+public class Main {
 	static int[][] board, original;
 	static int N, M, D, answer = 0;
 	static int maxAns = 0;
@@ -39,7 +37,7 @@ public class Ä³½½µğÆæ½º_17135 {
 	}
 
 	private static void combination(int n, int r, int index) {
-		// TODO Auto-generated method stub
+		// 3ëª…ì˜ ê¶ìˆ˜ë¥¼ ë°°ì¹˜í•  ì¡°í•©êµ¬í•˜ê¸°
 		if(r==0) {
 			game();
 			answer = 0;
@@ -53,18 +51,18 @@ public class Ä³½½µğÆæ½º_17135 {
 		}
 		if(index==n) return;
 		
-		board[N][index] = 2; //±Ã¼ö°¡ ÀÖ´Â Ä­Àº 2
+		board[N][index] = 2; //ê¶ìˆ˜ê°€ ìˆëŠ” ì¹¸ì€ 2
 		combination(n, r-1, index+1);
 		board[N][index] = 0;
 		combination(n, r, index+1);
 	}
 
 	private static void game() {
-		// TODO Auto-generated method stub
+		// ê²Œì„ ëŒë ¤ë³´ê¸°
 		while(true) {			
 			attack();
 			
-			if(!down()) {
+			if(!down()) { //ê³µê²©í•  ì ì´ ì—†ìœ¼ë©´ 
 				if(maxAns<answer) maxAns = answer;
 				return;
 			}
@@ -74,7 +72,7 @@ public class Ä³½½µğÆæ½º_17135 {
 	}
 
 	private static boolean down() {
-		// ÀûµéÀÌ ¾Æ·¡·Î ³»·Á¿À±â
+		// ì ë“¤ì´ ì•„ë˜ë¡œ ë‚´ë ¤ì˜¤ê¸°
 		boolean count = false;
 		
 		for(int i=N-1;i>=0;i--) {
@@ -92,7 +90,7 @@ public class Ä³½½µğÆæ½º_17135 {
 	}
 
 	private static void attack() {
-		// TODO Auto-generated method stub
+		// ì œì¼ ê°€ê¹Œìš´ ì  
 		int[] killX = {-1, -1, -1};
 		int[] killY = {-1, -1, -1};
 		int index = 0;
